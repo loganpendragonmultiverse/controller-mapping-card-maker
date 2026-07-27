@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "game": "Sky Road",
+  "platform": "PC",
+  "controller": "Xbox Wireless Controller",
+  "mappings": [
+    {"control": "A", "action": "Jump", "context": "On foot"},
+    {"control": "RT", "action": "Accelerate", "context": "Vehicle"},
+    {"control": "View", "action": "Open map"}
+  ],
+  "notes": "Hold View for the journal."
+}
