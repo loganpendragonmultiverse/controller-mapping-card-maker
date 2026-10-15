@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 - Unreleased
+
+- Added named mapping contexts, per-context control validation, and explicit context selection for HTML/Markdown print cards.
+
 ## 1.0.0 - 2026-07-26
 
 - Added validated controller-layout files.
