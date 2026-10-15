@@ -12,11 +12,16 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Create a controller mapping refresher card.")
     parser.add_argument("input", type=Path)
     parser.add_argument("--format", choices=("html", "markdown"), default="html")
+    parser.add_argument("--print-context", help="Include only this named context in the card")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     try:
         data = load_layout(args.input)
-        rendered = render_html(data) if args.format == "html" else render_markdown(data)
+        rendered = (
+            render_html(data, args.print_context)
+            if args.format == "html"
+            else render_markdown(data, args.print_context)
+        )
         if args.output:
             if args.output.exists():
                 raise ValueError(f"output already exists: {args.output}")
