@@ -1,6 +1,6 @@
 # Development
 
-## 1.1.0 candidate
+## 1.1.0 - 2026-10-15
 
 Legacy `mappings` layouts continue to work. For separate modes, replace `mappings` with a `contexts` list:
 
