@@ -1,5 +1,11 @@
 # Controller Mapping Card Maker
 
+> ⭐ **Gold Star Project**
+> I consider this project complete. Fixes, maintenance and good new ideas are still welcome.
+> [About Gold Stars](https://www.loganpendragonforge.com/open-source/?gold=1)
+>
+> Make printable and phone-friendly control reminders from mappings you supply.
+
 [![CI](https://github.com/loganpendragonmultiverse/controller-mapping-card-maker/actions/workflows/ci.yml/badge.svg)](https://github.com/loganpendragonmultiverse/controller-mapping-card-maker/actions/workflows/ci.yml)
 
 Controller Mapping Card Maker creates printable and phone-friendly control refresher cards from an explicit local JSON layout. It is useful when returning to a game, documenting a custom mapping, or keeping different control contexts visible.
@@ -31,3 +37,7 @@ Legacy `mappings` layouts continue to work. For separate modes, replace `mapping
 ```
 
 Controls must be unique within each context; the same control may have different actions in different contexts. Context names must be unique. Use `mapping-card layout.json --print-context "Driving" --output driving.html` to make a card containing only that context. Without selection, all contexts appear. The option also works with `--format markdown`. Unknown contexts are rejected. Cards remain self-contained with responsive single-column mobile layout and print styles; no scripts or game access are added.
+
+## 1.1.2 — October 19, 2026
+
+Output files are created exclusively. Existing files, source inputs and symlink destinations are refused, including files created by another writer after validation. Ordinary file errors return exit code 2 with a message. A failed write may leave a partial new report; inspect it and retry with a new destination. This does not provide transactions through power loss.
