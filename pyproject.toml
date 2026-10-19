@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "controller-mapping-card-maker"
-version = "1.1.1"
+version = "1.1.2"
 description = "Create printable and phone-friendly controller refresher cards from explicit layouts."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -31,3 +31,6 @@ omit = ["src/*/__main__.py"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--cov=controller_mapping_card --cov-branch --cov-report=term-missing --cov-fail-under=90"
+
+[tool.setuptools.data-files]
+"share/doc/controller-mapping-card-maker" = ["README.md", "CHANGELOG.md", "DEVELOPMENT.md", "TESTING.md"]

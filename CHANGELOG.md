@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 - 2026-10-19
+
+- Return exit code 2 for a closed stdout pipe without an interpreter shutdown traceback.
+- Create outputs exclusively and refuse dangling symlinks; preserve concurrently created files.
+- Document ordinary file-error behavior and partial-output limits.
+- Keep long controller labels and actions within narrow cards; qualify named contexts and print output.
+
 ## 1.1.1 - 2026-10-16
 
 - Correct the completed 1.1.0 release wording and dates; feature behavior is unchanged.
