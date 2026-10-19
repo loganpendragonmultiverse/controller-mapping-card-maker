@@ -41,3 +41,5 @@ Controls must be unique within each context; the same control may have different
 ## 1.1.2 — October 19, 2026
 
 Output files are created exclusively. Existing files, source inputs and symlink destinations are refused, including files created by another writer after validation. Ordinary file errors return exit code 2 with a message. A failed write may leave a partial new report; inspect it and retry with a new destination. This does not provide transactions through power loss.
+
+Closed stdout pipes return exit code 2 with a useful error, without leaving report bytes in an interpreter buffer. Regression checks cover small/large pipes, partial writes and complete Unicode output.

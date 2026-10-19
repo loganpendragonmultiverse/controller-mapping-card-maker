@@ -17,3 +17,5 @@ The pytest configuration enforces the repository's existing 90% coverage floor. 
 ## 1.1.2 qualification
 
 Run the full configured Ruff, pytest branch-coverage and package-build checks. Output-safety regressions cover existing/source destinations, symlink destinations, concurrent creators and ordinary I/O failures. Install both the wheel and source distribution separately outside the checkout, verify the entry point and version, and compare packaged documentation with this source. CI must pass on its supported OS/Python matrix before merge.
+
+Closed stdout pipes return exit code 2 with a useful error, without leaving report bytes in an interpreter buffer. Regression checks cover small/large pipes, partial writes and complete Unicode output.
